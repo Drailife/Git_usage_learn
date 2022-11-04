@@ -18,14 +18,23 @@ git status 命令用于显示工作目录和暂存区的状态。使用此命令
 ```python
  # 添加所有文件到暂存区
 git add *  
-
 #提交暂存区中的内容到本地仓库 -m 提交信息             
 git commit -m "消息内容"    
-
 #提交到远程库
 git push 
 ```
 
+# 删除库中文件
+```
+从repo中删除该文件，但也从本地文件系统中删除它
+git rm file.txt
+要从repo中删除文件而不从本地文件系统中删除它，请使用：  
+git rm --cached file.tx
+ 
+git add .
+git commit -m 'remove file'
+git push
+```
 # 忽略文件
 有些时候我们不想把某些文件纳入版本控制中，比如数据库文件，临时文件，设计文件等
 在主目录下建立".gitignore"文件，此文件有如下规则：
